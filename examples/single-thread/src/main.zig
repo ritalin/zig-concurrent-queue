@@ -1,31 +1,3 @@
-# zig-concurrent-queue
-Lock free/wait free conncurrent queue for Zig.
-
-This queue is built with Michael Scott algorithm.
-
-https://www.cs.rochester.edu/u/scott/papers/1996_PODC_queues.pdf
-
-## Requirement
-
-* Zig (https://ziglang.org/): version 0.14.0 or latter
-
-## Installation
-
-```
-zig fetch --save=zig_efsw https://github.com/ritalin/zig-concurrent-queue
-```
-
-Build setup:
-```zig
-const dep = b.dependency("zig-concurrent-queue", .{});
-
-const exe = b.addExecutable(...);
-exe.root_module.addImport("concurrent_queue", dep.module("concurrent_queue"));
-```
-
-## Example
-
-```zig
 const std = @import("std");
 const ConcurrentQueue = @import("concurrent_queue").ConcurrentQueue(i32);
 
@@ -60,8 +32,3 @@ pub fn main() !void {
         unreachable;
     }
 }
-```
-
-> [!WARNING]
-> This queue is not synchronization automatically between threads.
-> Therefore, you need to use the synchronization primitive (`std.Thread.Condition`, `std.Thread.Semaphore`, etc ) yourself.

@@ -5,7 +5,7 @@ pub fn build(b: *std.Build) void {
     const optimize = b.standardOptimizeOption(.{});
 
     _ = b.addModule(
-        "concurrent-queue",
+        "concurrent_queue",
         .{
             .root_source_file = b.path("src/root.zig"),
             .target = target,
