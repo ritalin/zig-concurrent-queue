@@ -51,7 +51,7 @@
         //    // actually used.
         //    .lazy = false,
         //},
-        .@"zig-concurrent-queue" = .{ .path = "../../" },
+        .concurrent_queue = .{ .path = "../../" },
     },
 
     // Specifies the set of files and directories that are included in this package.

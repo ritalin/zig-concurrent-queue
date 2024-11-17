@@ -4,7 +4,7 @@ pub fn build(b: *std.Build) void {
     const target = b.standardTargetOptions(.{});
     const optimize = b.standardOptimizeOption(.{});
 
-    const dep = b.dependency("zig-concurrent-queue", .{});
+    const dep = b.dependency("concurrent_queue", .{});
 
     const exe = b.addExecutable(.{
         .name = "multi-thread",

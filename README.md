@@ -12,12 +12,12 @@ https://www.cs.rochester.edu/u/scott/papers/1996_PODC_queues.pdf
 ## Installation
 
 ```
-zig fetch --save=zig_efsw https://github.com/ritalin/zig-concurrent-queue
+zig fetch --save=concurrent_queue https://github.com/ritalin/zig-concurrent-queue
 ```
 
 Build setup:
 ```zig
-const dep = b.dependency("zig-concurrent-queue", .{});
+const dep = b.dependency("concurrent_queue", .{});
 
 const exe = b.addExecutable(...);
 exe.root_module.addImport("concurrent_queue", dep.module("concurrent_queue"));
