@@ -12,7 +12,7 @@ https://www.cs.rochester.edu/u/scott/papers/1996_PODC_queues.pdf
 ## Installation
 
 ```
-zig fetch --save=concurrent_queue https://github.com/ritalin/zig-concurrent-queue
+zig fetch --save=concurrent_queue https://github.com/ritalin/zig-concurrent-queue/archive/refs/heads/main.tar.gz
 ```
 
 Build setup:
