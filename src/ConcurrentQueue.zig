@@ -63,7 +63,7 @@ pub fn ConcurrentQueue(comptime ValueType: type) type {
                     }
                 }
 
-                // Wait for a while (Active Back-off)
+                // Wait for a while (Exponential Back-off)
                 std.time.sleep(backoff);
                 backoff = @min(backoff * 2, 100);
             }
@@ -103,7 +103,7 @@ pub fn ConcurrentQueue(comptime ValueType: type) type {
                     }
                 }
 
-                // Wait for a while (Active Back-off)
+                // Wait for a while (Exponential Back-off)
                 std.time.sleep(backoff);
                 backoff = @min(backoff * 2, 100); 
             }
